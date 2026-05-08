@@ -1,0 +1,82 @@
+
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    list-style: none;
+    padding: 24px 156px;
+    margin: 0;
+    background: rgba(255, 255, 255, 1);
+}
+
+.gallery-image {
+    width: 360px;
+    height: 200px;
+    object-fit: cover;
+}
+
+
+
+
+input {
+    border: 1px solid rgba(128, 128, 128, 1);
+    height: 40px;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+}
+input:hover,
+textarea:hover,
+input:focus,
+textarea:focus {
+    border: 1px solid rgba(0, 0, 0, 1);
+    outline: none;
+}
+
+button {
+    background: rgba(78, 117, 255, 1);
+    color: rgba(255, 255, 255, 1);
+    border-radius: 8px;
+    border: none;
+    padding: 8px 16px;
+    width: auto;
+    margin-top: 16px;
+    outline: none;
+}
+button:hover,
+button:focus {
+    background: rgba(108, 140, 255, 1);
+}
+
+.feedback-form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+   align-items: flex-start;
+    background: rgba(255, 255, 255, 1);
+    width: 360px;
+    border-radius: 8px;
+    padding: 24px;
+    margin-top: 32px;
+}
+
+
+label {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+     text-align: start;
+    width: 100%;
+}
+
+textarea {
+    resize: none;
+    padding: 8px 16px;
+    height: 80px;
+    border-radius: 4px;
+    font-size: 16px;
+    line-height: 1.5;
+}

@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>Form</title>
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
@@ -12,7 +13,20 @@
       <div class="container">
         <h1 class="main-title">Form</h1>
         <load src="./partials/back-link.html" />
+
+        <form class="feedback-form" autocomplete="off">
+          <label>
+            Email
+            <input type="email" name="user-email" autofocus />
+          </label>
+          <label>
+            Message
+            <textarea name="user-message" rows="8"></textarea>
+          </label>
+          <button type="submit">Submit</button>
+        </form>
       </div>
     </main>
+    <script src="./js/2-form.js"></script>
   </body>
 </html>
