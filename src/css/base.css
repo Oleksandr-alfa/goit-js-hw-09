@@ -34,5 +34,12 @@ main:has(.back-link) {
 a {
  margin: 0;
 }
-
+ul {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  list-style: none;
+  padding: 50px;
+  margin: 0;
+}
 
