@@ -9,21 +9,21 @@ form.addEventListener(`input`, onFormInput);
 form.addEventListener(`submit`, onFormSubmit);
 const savedData = JSON.parse(localStorage.getItem(STORAGE_KEY))
 if (savedData) {
-    form.elements[`user-email`].value = savedData.email || '';
-    form.elements[`user-message`].value = savedData.message || '';
+    form.elements[`email`].value = savedData.email || '';
+    form.elements[`message`].value = savedData.message || '';
 
      formData.email = savedData.email || '';
   formData.message = savedData.message || '';
 }
 function onFormInput() {
-    formData.email = form.elements[`user-email`].value.trim();
-    formData.message = form.elements[`user-message`].value.trim();
+    formData.email = form.elements[`email`].value.trim();
+    formData.message = form.elements[`message`].value.trim();
  localStorage.setItem(STORAGE_KEY, JSON.stringify(formData));
 }
-function onFormSubmit() {
+function onFormSubmit(event) {
     event.preventDefault();
-    const email = form.elements[`user-email`].value.trim();
-    const message = form.elements[`user-message`].value.trim();
+    const email = form.elements[`email`].value.trim();
+    const message = form.elements[`message`].value.trim();
     if (email === '' || message === '') {
         alert('Fill please all fields');
         return;
@@ -35,6 +35,8 @@ function onFormSubmit() {
     console.log(formData);
     form.reset();
     localStorage.removeItem(STORAGE_KEY);
+    formData.email = '';
+    formData.message = '';
 }
 
    
